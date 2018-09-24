@@ -1,29 +1,9 @@
-import React, { Component } from 'react';
+
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { selectBook } from '../actions/index';
+import BookList from '../components/book_list';
 
-
-// TODO move the BookList view component out of the container?
-class BookList extends Component {
-  renderList() {
-    return this.props.books.map(book => (
-      <li
-        key={book.title}
-        onClick={() => this.props.selectBook(book)}
-        className="list-group-item">
-        {book.title}
-      </li>
-    ));
-  }
-  render() {
-    return (
-      <ul className="list-group col-sm-4">
-        {this.renderList()}
-      </ul>
-    );
-  }
-}
 
 function mapStateToProps(state) {
   return {
