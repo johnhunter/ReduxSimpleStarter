@@ -1,0 +1,13 @@
+.weather-list td,
+.weather-list th {
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+.chart svg {
+  height: 80px;
+}
+
+.input-group {
+  margin: 20px 0;
+}
