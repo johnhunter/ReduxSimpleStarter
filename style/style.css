@@ -5,9 +5,14 @@
 }
 
 .chart svg {
-  height: 80px;
+  height: 120px;
 }
 
 .input-group {
   margin: 20px 0;
+}
+
+.city-map > div {
+  height: 180px;
+  width: 180px;
 }
