@@ -1,23 +1,27 @@
 # ReduxSimpleStarter
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+Exercises from the Udemy course [Modern React with Redux](https://www.udemy.com/react-redux/). This repo contains my coursework based on the ReduxSimpleStarter supplied in course materials.
+
+Each course section starts from the upstream repo master hence the branches for each project. Not many commits, just the completed code for each section.
+
+### Deviations from the course
+
+- Used public class fields rather than binding methods to 'this' ([jury is still out](https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1)).
+- Separated out components from HOC containers - I prefer the separation and reduced noise.
+- Did not use Lodash - the equivalent JS is trivial.
+
+### Additional packages used in exercises
+
+- [axios](https://www.npmjs.com/package/axios)
+- [react-router](https://www.npmjs.com/package/react-router)
+- [redux-promise](https://www.npmjs.com/package/redux-promise)
+- [redux-form](https://www.npmjs.com/package/redux-form)
+- [react-sparklines](https://www.npmjs.com/package/react-sparklines)
+- [youtube-api-search](https://www.npmjs.com/package/youtube-api-search)
 
 ### Getting Started
 
-There are two methods for getting started with this repo.
-
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+Clone the repo, then:
 
 ```
 > npm install
