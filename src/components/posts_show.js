@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-
-import { fetchPost, deletePost } from '../actions/index';
 
 const shouldReFetchPost = true;
 
@@ -41,9 +38,5 @@ class PostsShow extends Component {
   }
 }
 
-function mapStateToProps ({ posts }, ownProps) {
-  const { id } = ownProps.match.params;
-  return { post: posts[id] };
-}
 
-export default connect(mapStateToProps, { fetchPost, deletePost })(PostsShow);
+export default PostsShow;
