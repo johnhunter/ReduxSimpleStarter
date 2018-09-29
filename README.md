@@ -9,12 +9,14 @@ Each course section starts from the upstream repo master hence the branches for 
 - Used public class fields rather than binding methods to 'this' ([jury is still out](https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1)).
 - Separated out components from HOC containers - I prefer the separation and reduced noise.
 - Did not use Lodash - the equivalent JS is trivial.
+- Swapped out redux-promise for thunk
 
 ### Additional packages used in exercises
 
 - [axios](https://www.npmjs.com/package/axios)
 - [react-router](https://www.npmjs.com/package/react-router)
 - [redux-promise](https://www.npmjs.com/package/redux-promise)
+- [redux-thunk](https://www.npmjs.com/package/redux-thunk)
 - [redux-form](https://www.npmjs.com/package/redux-form)
 - [react-sparklines](https://www.npmjs.com/package/react-sparklines)
 - [youtube-api-search](https://www.npmjs.com/package/youtube-api-search)
