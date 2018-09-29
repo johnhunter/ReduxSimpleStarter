@@ -15,6 +15,7 @@ class PostsNew extends Component {
     const { handleSubmit } = this.props;
     return (
       <form onSubmit={handleSubmit(this.onSubmit)}>
+        <h3>Create new post</h3>
         <Field
           name="title"
           label="Title for Post"

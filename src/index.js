@@ -11,8 +11,9 @@ import PostsNew from './containers/posts_new';
 import PostsShow from './containers/posts_show'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const middlewares = [thunk];
 const store = createStore(reducers, composeEnhancers(
-  applyMiddleware(thunk)
+  applyMiddleware(...middlewares)
 ));
 
 ReactDOM.render(

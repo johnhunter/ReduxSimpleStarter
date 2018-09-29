@@ -19,10 +19,8 @@ function validate (values) {
   return errors;
 }
 
-// Note: reduxForm HOC wraps the redux connect HOC
+const reduxContainer = connect(null, { createPost })(PostsNew);
 export default reduxForm({
   validate,
   form: 'PostsNewForm'
-})(
-  connect(null, { createPost })(PostsNew)
-);
+})(reduxContainer);

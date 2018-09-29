@@ -11,26 +11,22 @@ const API_KEY = 'jlh-83639';
 
 export function fetchPosts () {
   const request = axios.get(`${ROOT_URL}/posts?key=${API_KEY}`);
-  return (dispatch) => {
-    request.then((payload) => {
-      dispatch({ type: FETCH_POSTS, payload });
-    });
+  return dispatch => {
+    request.then(payload => dispatch({ type: FETCH_POSTS, payload }));
   }
 }
 
 export function fetchPost (id) {
   const request = axios.get(`${ROOT_URL}/posts/${id}?key=${API_KEY}`);
-  return (dispatch) => {
-    request.then((payload) => {
-      dispatch({ type: FETCH_POST, payload });
-    });
+  return dispatch => {
+    request.then(payload => dispatch({ type: FETCH_POST, payload }));
   }
 }
 
 export function createPost (values, callback) {
   const request = axios.post(`${ROOT_URL}/posts?key=${API_KEY}`, values);
-  return (dispatch) => {
-    request.then((payload) => {
+  return dispatch => {
+    request.then(payload => {
       dispatch({ type: CREATE_POST, payload });
       callback();
     });
@@ -39,7 +35,7 @@ export function createPost (values, callback) {
 
 export function deletePost (id, callback) {
   const request = axios.delete(`${ROOT_URL}/posts/${id}?key=${API_KEY}`);
-  return (dispatch) => {
+  return dispatch => {
     request.then(() => {
       dispatch({ type: DELETE_POST, payload: id });
       callback();

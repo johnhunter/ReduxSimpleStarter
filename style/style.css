@@ -1,3 +1,10 @@
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .secondary-btn {
   margin-left: .5em
+}
+.post-title {
+  margin-top: 1rem;
 }
