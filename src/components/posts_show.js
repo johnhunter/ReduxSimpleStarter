@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const shouldReFetchPost = true;
 
 class PostsShow extends Component {
+  static propTypes = {
+    deletePost: PropTypes.func.isRequired,
+    fetchPost: PropTypes.func.isRequired,
+    history: PropTypes.object.isRequired,
+    match: PropTypes.object.isRequired,
+    post: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      categories: PropTypes.string,
+      content: PropTypes.string
+    })
+  };
   onDeleteClick = () => {
     const { id } = this.props.match.params;
     this.props.deletePost(id, () => {

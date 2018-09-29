@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { Field } from 'redux-form';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import InputField from './input_field'
 
 class PostsNew extends Component {
+  static propTypes = {
+    createPost: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+    history: PropTypes.object.isRequired
+  };
   onSubmit = values => {
     this.props.createPost(values, () => {
       // Note: history prop provided by react-router
