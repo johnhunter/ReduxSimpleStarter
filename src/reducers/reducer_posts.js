@@ -2,7 +2,7 @@ import {
   FETCH_POSTS,
   FETCH_POST,
   DELETE_POST
-} from '../actions/index';
+} from '../actions/types';
 
 export default function(state = {}, action) {
   switch(action.type) {
