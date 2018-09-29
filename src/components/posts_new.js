@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Field } from 'redux-form';
 import { Link } from 'react-router-dom';
+import InputField from './input_field'
 
 class PostsNew extends Component {
   onSubmit = values => {
@@ -10,31 +11,6 @@ class PostsNew extends Component {
     });
   }
 
-  renderField (field) {
-    const {
-      label,
-      input: { name },
-      meta: { touched, error }
-    } = field;
-
-    const className = `form-group ${touched && error ? 'has-danger' : ''}`;
-
-    return (
-      <div className={className}>
-        <label htmlFor={name}>{label}</label>
-        <input
-          id={name}
-          className="form-control"
-          type="text"
-          {...field.input}
-        />
-        <span className="text-help">
-          {touched ? error : ''}
-        </span>
-      </div>
-    )
-  }
-
   render() {
     const { handleSubmit } = this.props;
     return (
@@ -42,17 +18,17 @@ class PostsNew extends Component {
         <Field
           name="title"
           label="Title for Post"
-          component={this.renderField}
+          component={InputField}
         />
         <Field
           name="categories"
           label="Categories"
-          component={this.renderField}
+          component={InputField}
         />
         <Field
           name="content"
           label="Content for Post"
-          component={this.renderField}
+          component={InputField}
         />
         <button type="submit" className="btn btn-primary">Submit</button>
         <Link to="/" className="btn btn-danger secondary-btn">Cancel</Link>
