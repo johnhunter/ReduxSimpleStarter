@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -10,10 +10,13 @@ import PostsIndex from './containers/posts_index';
 import PostsNew from './containers/posts_new';
 import PostsShow from './containers/posts_show'
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+//const store = applyMiddleware(thunk)(createStore)(reducers);
+const store = createStore(reducers, compose(
+  applyMiddleware(thunk)
+));
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
+  <Provider store={store}>
     <BrowserRouter>
       <div>
       <Switch>
