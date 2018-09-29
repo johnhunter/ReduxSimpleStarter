@@ -10,8 +10,8 @@ import PostsIndex from './containers/posts_index';
 import PostsNew from './containers/posts_new';
 import PostsShow from './containers/posts_show'
 
-//const store = applyMiddleware(thunk)(createStore)(reducers);
-const store = createStore(reducers, compose(
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, composeEnhancers(
   applyMiddleware(thunk)
 ));
 
